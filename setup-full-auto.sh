@@ -68,10 +68,6 @@ dpkg-reconfigure keyboard-configuration
 # Fix DNS
 echo "Cache=no" >>/etc/systemd/resolved.conf
 
-# Add groups
-adduser kfiala lxd
-adduser kfiala docker
-
 # Template for WiFi configuration
 cat >/etc/wpa_supplicant/config.conf <<EOF
 ctrl_interface=/run/wpa_supplicant
@@ -96,5 +92,7 @@ bash setup-specific-${serial}.sh
 
 # Get my configuration
 runuser -l kfiala -c 'git clone https://github.com/fialakarel/dotfiles .dotfiles'
+runuser -l kfiala -c 'cd .dotfiles && git remote remove origin'
+runuser -l kfiala -c 'cd .dotfiles && git remote add origin git@github.com:fialakarel/dotfiles.git'
 runuser -l kfiala -c 'bash .dotfiles/delete-local-config.sh'
 runuser -l kfiala -c 'bash .dotfiles/create-symlinks.sh'

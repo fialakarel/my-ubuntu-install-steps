@@ -45,6 +45,10 @@ sudo apt-get dist-upgrade -y
 #youtube-dl -> should be install via pip
 #wireshark -> I mostly use tcpdump
 
+# Add groups
+sudo adduser kfiala lxd
+sudo adduser kfiala docker
+
 # Install VS Code
 wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O /tmp/vscode.deb
 sudo dpkg -i /tmp/vscode.deb
