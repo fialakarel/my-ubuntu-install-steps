@@ -19,10 +19,10 @@ read dummy
 export DEBIAN_FRONTEND=noninteractive
 
 # Update
-apt-get update
+sudo apt-get update
 
 # Install all other packages
-apt-get install --yes alsa-utils aspell-cs atool arandr bc bleachbit bridge-utils \
+sudo apt-get install --yes alsa-utils aspell-cs atool arandr bc bleachbit bridge-utils \
     caca-utils chromium-browser cifs-utils criu cups debian-goodies deborphan detox \
     docker.io exifprobe feh ffmpeg freerdp-x11 gimp git gpicview gpicview-dbg highlight \
     htop i3 i3status i7z ifenslave imagemagick iperf j4-dmenu-desktop key-mon kvmtool \
@@ -38,7 +38,7 @@ apt-get install --yes alsa-utils aspell-cs atool arandr bc bleachbit bridge-util
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel
 
 # Fully upgrade
-apt-get dist-upgrade -y
+sudo apt-get dist-upgrade -y
 
 # Skipped packages
 #texlive-full texlive-bibtex-extra texlive-lang-czechslovak texlive-xetex texmaker
@@ -47,6 +47,6 @@ apt-get dist-upgrade -y
 
 # Install VS Code
 wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O /tmp/vscode.deb
-dpkg -i /tmp/vscode.deb
-apt-get install -fy
+sudo dpkg -i /tmp/vscode.deb
+sudo apt-get install -fy
 rm /tmp/vscode.deb
