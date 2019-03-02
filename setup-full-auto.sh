@@ -99,3 +99,6 @@ runuser -l kfiala -c 'cd .dotfiles && git remote remove origin'
 runuser -l kfiala -c 'cd .dotfiles && git remote add origin git@github.com:fialakarel/dotfiles.git'
 runuser -l kfiala -c 'bash .dotfiles/delete-local-config.sh'
 runuser -l kfiala -c 'bash .dotfiles/create-symlinks.sh'
+
+# Minor tweak -- remove sudo message before first use
+runuser -l kfiala -c 'touch .sudo_as_admin_successful'
