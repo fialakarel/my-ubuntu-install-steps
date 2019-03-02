@@ -16,6 +16,9 @@ cat >>/etc/sysctl.conf <<EOF
 # inotify tweaks
 fs.inotify.max_user_watches = 1048576
 fs.inotify.max_user_instances = 256
+
+# allow sysrq
+kernel.sysrq = 1
 EOF
 
 # Set eth0 interface to managed -> Do not use on the servers
