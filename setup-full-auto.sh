@@ -30,18 +30,15 @@ add-apt-repository --yes ppa:nextcloud-devs/client
 apt-get update
 
 # Install necessary packages for the first boot
-apt-get install --yes alsa-utils atool arandr bc bridge-utils chromium-browser \
-    cifs-utils cups debian-goodies detox docker.io exifprobe feh ffmpeg \
-    freerdp-x11 git i3 i3status i7z ifenslave imagemagick iperf \
+apt-get install --yes alsa-utils atool arandr bc chromium-browser \
+    cifs-utils cups debian-goodies detox feh i3 i3status i7z curl wget \
     j4-dmenu-desktop libimage-exiftool-perl libnotify-bin libpango1.0-0 \
-    lxc lxd lxd-client lxd-tools mediainfo mesa-utils mplayer nfs-common \
-    nmap ntp ntpdate openvpn nextcloud-client prelink preload pulseaudio pv \
-    python3-pip qemu-kvm qemu-system qemu-utils ranger screen screengrab \
-    simplescreenrecorder smartmontools sshfs ssvnc terminator tmux tree \
-    ttf-mscorefonts-installer udiskie unrar vim virt-goodies virt-manager \
-    vlan w3m wakeonlan wpasupplicant xdotool xinit xinput xtightvncviewer \
-    xorg zathura unzip acpi keepass2 suckless-tools curl wget net-tools \
-    xbacklight xserver-xorg-video-intel upower xserver-xorg-input-synaptics
+    mesa-utils mplayer nfs-common ntp openvpn nextcloud-client prelink preload \
+    pulseaudio pv python3-pip ranger screen \
+    smartmontools terminator tmux tree udiskie unrar vim w3m wpasupplicant \
+    xdotool xinit xinput xorg zathura unzip acpi keepass2 suckless-tools \
+    net-tools xbacklight xserver-xorg-video-intel upower \
+    xserver-xorg-input-synaptics
 
 # Fix apps
 mkdir -p /home/kfiala/.local/share
