@@ -15,6 +15,10 @@ sudo cryptsetup luksChangeKey /dev/sda5
 # Press a key to continue
 read dummy
 
+# Configure vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+yes | vim +PluginInstall +qall
+
 # Entering noninteractive state
 export DEBIAN_FRONTEND=noninteractive
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
