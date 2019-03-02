@@ -17,12 +17,14 @@ read dummy
 
 # Entering noninteractive state
 export DEBIAN_FRONTEND=noninteractive
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 
 # Update
 sudo apt-get update
 
 # Install all other packages
-sudo apt-get install --yes alsa-utils aspell-cs atool arandr bc bleachbit bridge-utils \
+sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
+    alsa-utils aspell-cs atool arandr bc bleachbit bridge-utils \
     caca-utils chromium-browser cifs-utils criu cups debian-goodies deborphan detox \
     docker.io exifprobe feh ffmpeg freerdp-x11 gimp git gpicview gpicview-dbg highlight \
     htop i3 i3status i7z ifenslave imagemagick iperf j4-dmenu-desktop key-mon kvmtool \
@@ -38,7 +40,7 @@ sudo apt-get install --yes alsa-utils aspell-cs atool arandr bc bleachbit bridge
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel
 
 # Fully upgrade
-sudo apt-get dist-upgrade -y
+sudo apt-get -o Dpkg::Options::="--force-confold" dist-upgrade -y
 
 # Skipped packages
 #texlive-full texlive-bibtex-extra texlive-lang-czechslovak texlive-xetex texmaker
@@ -54,3 +56,6 @@ wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O /tmp/vscode.deb
 sudo dpkg -i /tmp/vscode.deb
 sudo apt-get install -fy
 rm /tmp/vscode.deb
+
+# Installation finished ...
+# Please, reboot the system to take effect.
