@@ -14,4 +14,4 @@ Section "Device"
   Identifier "Intel"
   Driver "intel"
 EndSection
-EOF  
+EOF
