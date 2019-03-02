@@ -38,7 +38,7 @@ apt-get install --yes alsa-utils atool arandr bc chromium-browser \
     smartmontools terminator tmux tree udiskie unrar vim w3m wpasupplicant \
     xdotool xinit xinput xorg zathura unzip acpi keepass2 suckless-tools \
     net-tools xbacklight xserver-xorg-video-intel upower \
-    xserver-xorg-input-synaptics
+    xserver-xorg-input-all xserver-xorg-input-libinput xserver-xorg-input-synaptics
 
 # Fix apps
 mkdir -p /home/kfiala/.local/share
