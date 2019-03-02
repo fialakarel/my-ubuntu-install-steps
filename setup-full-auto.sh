@@ -41,7 +41,7 @@ apt-get install --yes alsa-utils atool arandr bc bridge-utils chromium-browser \
     ttf-mscorefonts-installer udiskie unrar vim virt-goodies virt-manager \
     vlan w3m wakeonlan wpasupplicant xdotool xinit xinput xtightvncviewer \
     xorg zathura unzip acpi keepass2 suckless-tools curl wget net-tools \
-    xbacklight xserver-xorg-video-intel
+    xbacklight xserver-xorg-video-intel upower xserver-xorg-input-synaptics
 
 # Fix apps
 mkdir -p /home/kfiala/.local/share
