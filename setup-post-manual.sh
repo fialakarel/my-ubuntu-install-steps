@@ -11,13 +11,13 @@ passwd
 sudo cryptsetup luksHeaderBackup /dev/sda5 --header-backup-file /root/luks-header.backup
 sudo cryptsetup luksChangeKey /dev/sda5
 
+# Configure vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+vim +PluginInstall +qall
+
 # Please, launch Nextcloud and synchronize data
 # Press a key to continue
 read dummy
-
-# Configure vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
-yes | vim +PluginInstall +qall
 
 # Entering noninteractive state
 export DEBIAN_FRONTEND=noninteractive
