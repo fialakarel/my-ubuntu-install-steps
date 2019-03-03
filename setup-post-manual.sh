@@ -55,6 +55,11 @@ sudo apt-get -o Dpkg::Options::="--force-confold" dist-upgrade -y
 sudo adduser kfiala lxd
 sudo adduser kfiala docker
 
+# Install system wide python packages
+sudo pip3 install --upgrade setuptools
+sudo pip3 install --upgrade ansible
+sudo pip3 install --upgrade youtube-dl
+
 # Install VS Code
 wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O /tmp/vscode.deb
 sudo dpkg -i /tmp/vscode.deb
