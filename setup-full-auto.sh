@@ -37,7 +37,7 @@ apt-get install --yes alsa-utils atool arandr bc chromium-browser \
     cifs-utils cups debian-goodies detox feh i3 i3status i7z curl wget \
     j4-dmenu-desktop libimage-exiftool-perl libnotify-bin libpango1.0-0 \
     mesa-utils mplayer nfs-common ntp openvpn nextcloud-client prelink preload \
-    pulseaudio pv python3-pip ranger screen \
+    pulseaudio pv python3-pip ranger screen dnsutils \
     smartmontools terminator tmux tree udiskie unrar vim w3m wpasupplicant \
     xdotool xinit xinput xorg zathura unzip acpi keepass2 suckless-tools \
     net-tools xbacklight xserver-xorg-video-intel upower \
