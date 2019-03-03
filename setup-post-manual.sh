@@ -61,5 +61,10 @@ sudo dpkg -i /tmp/vscode.deb
 sudo apt-get install -fy
 rm /tmp/vscode.deb
 
+# Install Miniconda3
+wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh" -O /tmp/miniconda3.sh
+bash /tmp/miniconda3.sh -b -s -p $HOME/miniconda3
+rm /tmp/miniconda3.sh
+
 # Installation finished ...
 # Please, reboot the system to take effect.
