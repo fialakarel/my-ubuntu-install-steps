@@ -102,3 +102,6 @@ runuser -l kfiala -c 'bash .dotfiles/create-symlinks.sh'
 
 # Minor tweak -- remove sudo message before first use
 runuser -l kfiala -c 'touch .sudo_as_admin_successful'
+
+# Fix Keepass2 segfault on Ubuntu
+sed -i "s/cli/cli --verify-all/" $(which keepass2)
