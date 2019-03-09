@@ -69,6 +69,11 @@ echo "LidSwitchIgnoreInhibited=yes" >>/etc/systemd/logind.conf
 sed -i 's/XKBLAYOUT="us"/XKBLAYOUT="cz"/' /etc/default/keyboard
 dpkg-reconfigure keyboard-configuration
 
+# Fix locales
+locale-gen en_US.UTF-8
+update-locale LANG="en_US.UTF-8"
+echo "LANG=en_US.UTF-8" >/etc/default/locale
+
 # Fix DNS
 echo "Cache=no" >>/etc/systemd/resolved.conf
 
