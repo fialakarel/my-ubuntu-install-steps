@@ -42,7 +42,7 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     virt-goodies virt-manager vlan w3m wakeonlan wpasupplicant x2goclient xdotool \
     xinit xinput xtightvncviewer xorg zathura unzip parcellite acpi keepass2 \
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel \
-    mirage
+    mirage p7zip-full
 
 # Fully upgrade
 sudo apt-get -o Dpkg::Options::="--force-confold" dist-upgrade -y
