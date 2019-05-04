@@ -8,4 +8,5 @@ bash setup-full-auto.sh
 
 # Prepare last manual steps
 # There should be everything which takes long time
-cp setup-post-manual.sh /home/kfiala/.
+cp setup-post-* /home/kfiala/.
+cp -r install /home/kfiala/.

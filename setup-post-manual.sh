@@ -72,5 +72,14 @@ wget "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh" -O
 bash /tmp/miniconda3.sh -b -s -p $HOME/miniconda3
 rm /tmp/miniconda3.sh
 
+# Get HW serial
+serial="$(dmidecode -s baseboard-serial-number)"
+
+# Execute machine specific install steps
+if [ -f setup-post-specific-${serial}.sh ]
+then
+    bash setup-post-specific-${serial}.sh
+fi
+
 # Installation finished ...
 # Please, reboot the system to take effect.
