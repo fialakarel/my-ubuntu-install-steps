@@ -101,16 +101,12 @@ bash setup-specific-${serial}.sh
 
 # Get my configuration
 runuser -l kfiala -c 'git clone https://github.com/fialakarel/dotfiles .dotfiles'
-runuser -l kfiala -c 'cd .dotfiles && git remote remove origin'
-runuser -l kfiala -c 'cd .dotfiles && git remote add origin git@github.com:fialakarel/dotfiles.git'
 runuser -l kfiala -c 'bash .dotfiles/delete-local-config.sh'
 runuser -l kfiala -c 'bash .dotfiles/create-symlinks.sh'
 
 # Minor tweak -- remove sudo message before first use
 runuser -l kfiala -c 'touch .sudo_as_admin_successful'
 runuser -l kfiala -c 'mkdir temp'
-runuser -l kfiala -c 'mkdir -p git/github.com'
-runuser -l kfiala -c 'mkdir -p git/gitlab.fialakarel.cz/kfiala'
 
 # Fix Keepass2 segfault on Ubuntu
 sed -i "s/cli/cli --verify-all/" $(which keepass2)
