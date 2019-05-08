@@ -8,6 +8,7 @@ set -v
 passwd
 
 # Change your hard drive password
+# TODO: determine rootfs to change password
 sudo cryptsetup luksHeaderBackup /dev/sda5 --header-backup-file /root/luks-header.backup
 sudo cryptsetup luksChangeKey /dev/sda5
 
