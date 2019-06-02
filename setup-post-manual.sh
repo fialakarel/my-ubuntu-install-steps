@@ -61,6 +61,7 @@ sudo adduser kfiala docker
 sudo pip3 install --upgrade setuptools
 sudo pip3 install --upgrade ansible
 sudo pip3 install --upgrade youtube-dl
+sudo pip3 install --upgrade cookiecutter
 
 # Install VS Code
 wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O /tmp/vscode.deb
