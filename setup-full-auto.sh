@@ -30,10 +30,13 @@ EOF
 # Add Nextcloud repo
 add-apt-repository --yes ppa:nextcloud-devs/client
 
+# Add Chrome repo
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >/etc/apt/sources.list.d/google-chrome.list
+
 apt-get update
 
 # Install necessary packages for the first boot
-apt-get install --yes alsa-utils atool arandr bc chromium-browser \
+apt-get install --yes alsa-utils atool arandr bc google-chrome-stable \
     cifs-utils cups debian-goodies detox feh i3 i3status i7z curl wget \
     j4-dmenu-desktop libimage-exiftool-perl libnotify-bin libpango1.0-0 \
     mesa-utils mplayer nfs-common ntp openvpn nextcloud-client prelink preload \
