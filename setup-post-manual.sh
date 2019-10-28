@@ -44,7 +44,7 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     xinit xinput xtightvncviewer xorg zathura unzip parcellite acpi keepass2 \
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel \
     mirage p7zip-full spice-vdagent gir1.2-spiceclientgtk-3.0 jq spice-vdagent \
-    gir1.2-spiceclientgtk-3.0
+    gir1.2-spiceclientgtk-3.0 xclip mosh
 
 # Fully upgrade
 sudo apt-get -o Dpkg::Options::="--force-confold" dist-upgrade -y
