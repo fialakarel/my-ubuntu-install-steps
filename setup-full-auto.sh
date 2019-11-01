@@ -80,20 +80,23 @@ echo "LANG=en_US.UTF-8" >/etc/default/locale
 # Fix DNS
 echo "Cache=no" >>/etc/systemd/resolved.conf
 
-# Template for WiFi configuration
-cat >/etc/wpa_supplicant/config.conf <<EOF
-ctrl_interface=/run/wpa_supplicant
-update_config=1
-
-#network={
-#	ssid="editthiswpa2wifi"
-#	psk="securepassword"
-#}
-
-#network={
-#	ssid="freewifi"
-#	key_mgmt=NONE
-#}
+# Template for netplan
+cat >/etc/netplan/01-netcfg.yaml <<EOF
+# This file describes the network interfaces available on your system
+# For more information, see netplan(5).
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      dhcp4: yes
+#  wifis:
+#    wlan0
+#      dhcp4: yes
+#      access-points:
+#        "<SSID>":
+#          password: "<pass>"
+#        "<SSID>": {}
 EOF
 
 # Get HW serial
