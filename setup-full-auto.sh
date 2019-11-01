@@ -21,17 +21,12 @@ fs.inotify.max_user_instances = 256
 kernel.sysrq = 1
 EOF
 
-# Set eth0 interface to managed -> Do not use on the servers
-cat >/etc/network/interfaces <<EOF
-auto lo
-iface lo inet loopback
-EOF
-
 # Add Nextcloud repo
 add-apt-repository --yes ppa:nextcloud-devs/client
 
 # Add Chrome repo
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >/etc/apt/sources.list.d/google-chrome.list
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 
 apt-get update
 
@@ -39,7 +34,7 @@ apt-get update
 apt-get install --yes alsa-utils atool arandr bc google-chrome-stable \
     cifs-utils cups debian-goodies detox feh i3 i3status i7z curl wget \
     j4-dmenu-desktop libimage-exiftool-perl libnotify-bin libpango1.0-0 \
-    mesa-utils mplayer nfs-common ntp openvpn nextcloud-client prelink preload \
+    mesa-utils mplayer nfs-common ntp openvpn nextcloud-desktop prelink preload \
     pulseaudio pv python3-pip ranger screen dnsutils \
     smartmontools terminator tmux tree udiskie unrar vim w3m wpasupplicant \
     xdotool xinit xinput xorg zathura unzip acpi keepass2 suckless-tools \
