@@ -99,6 +99,21 @@ network:
 #        "<SSID>": {}
 EOF
 
+# Lock screen on suspend
+cat /etc/systemd/system/lock.service <<EOF
+[Unit]
+Description=Lock the screen on resume from suspend
+
+[Service]
+User=kfiala
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/i3lock -c 000050
+
+[Install]
+WantedBy=suspend.target
+EOF
+
 # Get HW serial
 serial="$(dmidecode -s baseboard-serial-number)"
 
