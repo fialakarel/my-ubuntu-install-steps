@@ -8,7 +8,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 
 # Install base packages
-apt-get install --yes htop tmux screen vim git bash-completion software-properties-common
+apt-get install --yes htop tmux screen vim git bash-completion software-properties-common wget
 
 # Kernel tweaks
 cat >>/etc/sysctl.conf <<EOF
