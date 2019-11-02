@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -v
+set -ve
 
 # There are steps to finish your installation.
 
@@ -14,7 +14,9 @@ sudo cryptsetup luksChangeKey /dev/sda5
 
 # Configure vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+set +e
 vim +PluginInstall +qall
+set -e
 
 # Please, launch Nextcloud and synchronize data
 # Press a key to continue
@@ -66,7 +68,9 @@ sudo pip3 install --upgrade cookiecutter
 
 # Install VS Code
 wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O /tmp/vscode.deb
+set +e
 sudo dpkg -i /tmp/vscode.deb
+set -e
 sudo apt-get install -fy
 rm /tmp/vscode.deb
 
