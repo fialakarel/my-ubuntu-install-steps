@@ -40,7 +40,8 @@ apt-get install --yes alsa-utils atool arandr bc google-chrome-stable \
     xdotool xinit xinput xorg zathura unzip acpi keepass2 suckless-tools \
     net-tools xbacklight xserver-xorg-video-intel upower \
     xserver-xorg-input-all xserver-xorg-input-libinput xserver-xorg-input-synaptics \
-    openvpn-systemd-resolved zip i3lock git-lfs dosfstools scrot exfat-utils exfat-fuse
+    openvpn-systemd-resolved zip i3lock git-lfs dosfstools scrot exfat-utils exfat-fuse \
+    gnome-keyring
 
 # Fix apps
 mkdir -p /home/kfiala/.local/share
