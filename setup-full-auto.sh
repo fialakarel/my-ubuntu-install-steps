@@ -110,6 +110,9 @@ ExecStart=/usr/bin/i3lock -c 000050
 WantedBy=suspend.target
 EOF
 
+# Enable lock.service
+systemctl enable lock.service
+
 # Get HW serial
 serial="$(dmidecode -s baseboard-serial-number)"
 
