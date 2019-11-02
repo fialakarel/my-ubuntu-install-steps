@@ -29,6 +29,9 @@ echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select tr
 # Update
 sudo apt-get update
 
+# Fully upgrade first
+sudo apt-get -o Dpkg::Options::="--force-confold" dist-upgrade -y
+
 # Install all other packages
 sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     alsa-utils aspell-cs atool arandr bc bleachbit bridge-utils \
@@ -47,9 +50,6 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel \
     mirage p7zip-full spice-vdagent gir1.2-spiceclientgtk-3.0 jq \
     xclip mosh
-
-# Fully upgrade
-sudo apt-get -o Dpkg::Options::="--force-confold" dist-upgrade -y
 
 # Skipped packages
 #texlive-full texlive-bibtex-extra texlive-lang-czechslovak texlive-xetex texmaker
