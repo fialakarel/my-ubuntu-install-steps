@@ -96,7 +96,7 @@ network:
 EOF
 
 # Lock screen on suspend
-cat /etc/systemd/system/lock.service <<EOF
+cat >/etc/systemd/system/lock.service <<EOF
 [Unit]
 Description=Lock the screen on resume from suspend
 
