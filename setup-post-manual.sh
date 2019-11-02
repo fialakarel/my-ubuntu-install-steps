@@ -13,7 +13,7 @@ sudo cryptsetup luksHeaderBackup /dev/sda5 --header-backup-file /boot/luks-heade
 sudo cryptsetup luksChangeKey /dev/sda5
 
 # Configure vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set +e
 vim +PluginInstall +qall
 set -e
