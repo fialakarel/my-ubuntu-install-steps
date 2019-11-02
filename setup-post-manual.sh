@@ -9,7 +9,7 @@ passwd
 
 # Change your hard drive password
 # TODO: determine rootfs to change password
-sudo cryptsetup luksHeaderBackup /dev/sda5 --header-backup-file /root/luks-header.backup
+sudo cryptsetup luksHeaderBackup /dev/sda5 --header-backup-file /boot/luks-header.backup
 sudo cryptsetup luksChangeKey /dev/sda5
 
 # Configure vim
@@ -62,6 +62,7 @@ sudo adduser kfiala docker
 
 # Install system wide python packages
 sudo pip3 install --upgrade setuptools
+sudo pip3 install --upgrade wheel
 sudo pip3 install --upgrade ansible
 sudo pip3 install --upgrade youtube-dl
 sudo pip3 install --upgrade cookiecutter
