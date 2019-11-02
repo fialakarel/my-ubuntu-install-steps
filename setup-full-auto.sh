@@ -86,7 +86,7 @@ network:
     eth0:
       dhcp4: yes
 #  wifis:
-#    wlan0
+#    wlan0:
 #      dhcp4: yes
 #      access-points:
 #        "<SSID>":
