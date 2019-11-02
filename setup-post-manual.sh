@@ -81,7 +81,7 @@ bash /tmp/miniconda3.sh -b -s -p $HOME/miniconda3
 rm /tmp/miniconda3.sh
 
 # Get HW serial
-serial="$(dmidecode -s baseboard-serial-number)"
+serial="$(sudo dmidecode -s baseboard-serial-number)"
 
 # Execute machine specific install steps
 if [ -f setup-post-specific-${serial}.sh ]
