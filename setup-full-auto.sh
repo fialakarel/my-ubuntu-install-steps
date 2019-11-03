@@ -107,7 +107,7 @@ Environment=DISPLAY=:0
 ExecStart=/usr/bin/i3lock -c 000050
 
 [Install]
-WantedBy=suspend.target
+WantedBy=suspend.target sleep.target
 EOF
 
 # Enable lock.service
