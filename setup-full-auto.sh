@@ -41,7 +41,7 @@ apt-get install --yes alsa-utils atool arandr bc google-chrome-stable \
     net-tools xbacklight xserver-xorg-video-intel upower \
     xserver-xorg-input-all xserver-xorg-input-libinput xserver-xorg-input-synaptics \
     openvpn-systemd-resolved zip i3lock git-lfs dosfstools scrot exfat-utils exfat-fuse \
-    gnome-keyring
+    gnome-keyring pavucontrol pasystray
 
 # Fix apps
 mkdir -p /home/kfiala/.local/share
