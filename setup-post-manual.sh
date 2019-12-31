@@ -18,7 +18,7 @@ set +e
 vim +PluginInstall +qall
 set -e
 
-# Please, launch Nextcloud and synchronize data
+# Please, launch Insync and synchronize data
 # Press a key to continue
 read dummy
 
@@ -41,7 +41,7 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     libimage-exiftool-perl libnotify-bin libpango1.0-0 libreoffice-base libreoffice-calc \
     libreoffice-impress libreoffice-l10n-cs libreoffice-writer lptools lxc lxd \
     lxd-client lxd-tools mediainfo mesa-utils mplayer mpv nfs-common nmap ntp ntpdate \
-    openvpn nextcloud-desktop pandoc poppler-utils prelink preload pulseaudio pv \
+    openvpn pandoc poppler-utils prelink preload pulseaudio pv \
     python3-pip qemu-kvm qemu-system qemu-utils ranger screen screengrab \
     simplescreenrecorder smartmontools sshfs ssvnc terminator tmux tree trickle \
     ttf-mscorefonts-installer udiskie unrar usb-creator-common usb-creator-gtk vim \
