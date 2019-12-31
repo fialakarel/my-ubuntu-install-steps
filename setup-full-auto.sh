@@ -28,6 +28,11 @@ add-apt-repository --yes ppa:nextcloud-devs/client
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >/etc/apt/sources.list.d/google-chrome.list
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 
+# Get Insync pubkey and add the Insync software repository
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
+DISTRO=$(lsb_release -cs)
+echo "deb http://apt.insync.io/ubuntu $DISTRO non-free contrib" >/etc/apt/sources.list.d/insync.list
+
 apt-get update
 
 # Install necessary packages for the first boot
@@ -41,7 +46,7 @@ apt-get install --yes alsa-utils atool arandr bc google-chrome-stable \
     net-tools xbacklight xserver-xorg-video-intel upower \
     xserver-xorg-input-all xserver-xorg-input-libinput xserver-xorg-input-synaptics \
     openvpn-systemd-resolved zip i3lock git-lfs dosfstools scrot exfat-utils exfat-fuse \
-    gnome-keyring pavucontrol pasystray
+    gnome-keyring pavucontrol pasystray insync
 
 # Fix apps
 mkdir -p /home/kfiala/.local/share
