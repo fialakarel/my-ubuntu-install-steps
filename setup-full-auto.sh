@@ -27,7 +27,7 @@ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 
 # Get Insync pubkey and add the Insync software repository
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
-DISTRO=$(lsb_release -cs)
+export DISTRO=$(lsb_release -cs)
 echo "deb http://apt.insync.io/ubuntu $DISTRO non-free contrib" >/etc/apt/sources.list.d/insync.list
 
 apt-get update
