@@ -26,7 +26,7 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >/etc
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
 
 # Get Insync pubkey and add the Insync software repository
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ACCAF35C
 export DISTRO=$(lsb_release -cs)
 echo "deb http://apt.insync.io/ubuntu $DISTRO non-free contrib" >/etc/apt/sources.list.d/insync.list
 
