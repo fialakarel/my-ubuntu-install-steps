@@ -49,7 +49,7 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     xinit xinput xtightvncviewer xorg zathura unzip parcellite acpi keepass2 \
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel \
     mirage p7zip-full spice-vdagent gir1.2-spiceclientgtk-3.0 jq \
-    xclip mosh gparted
+    xclip mosh gparted xutils
 
 # Skipped packages
 #texlive-full texlive-bibtex-extra texlive-lang-czechslovak texlive-xetex texmaker
