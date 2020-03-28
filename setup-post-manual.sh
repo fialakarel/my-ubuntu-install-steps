@@ -89,5 +89,8 @@ then
     bash setup-post-specific-${serial}.sh
 fi
 
+# Git clone install scripts for further use
+git clone https://github.com/fialakarel/my-ubuntu-install-steps ~/.my-ubuntu-install-steps
+
 # Installation finished ...
 # Please, reboot the system to take effect.
