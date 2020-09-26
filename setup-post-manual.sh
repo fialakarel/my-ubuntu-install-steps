@@ -92,5 +92,8 @@ fi
 # Git clone install scripts for further use
 git clone https://github.com/fialakarel/my-ubuntu-install-steps ~/.my-ubuntu-install-steps
 
+# Install pyenv and poetry
+bash ~/install/pyenv-poetry.sh
+
 # Installation finished ...
 # Please, reboot the system to take effect.
