@@ -6,8 +6,7 @@ version="$(curl https://github.com/digitalocean/doctl/releases/latest | cut -d'"
 
 cd /tmp
 
-wget https://github.com/digitalocean/doctl/releases/download/v${version}/doctl-${version}-linux-amd64.tar.gz -O doctl.tgz
-
+wget --no-verbose https://github.com/digitalocean/doctl/releases/download/v${version}/doctl-${version}-linux-amd64.tar.gz -O doctl.tgz
 
 tar xf doctl.tgz
 
