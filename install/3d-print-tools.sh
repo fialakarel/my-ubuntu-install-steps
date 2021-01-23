@@ -13,7 +13,7 @@ user="$(id --user --name)"
 dst="/home/${user}/bin/PrusaSlicer"
 
 # Get it
-wget https://prusa3d.com/downloads/drivers/prusa3d_linux_2_2_9_1.zip -O prusa3d.zip
+wget https://cdn.prusa3d.com/downloads/drivers/prusa3d_linux_2_3_0.zip -O prusa3d.zip
 
 # Unzip
 unzip prusa3d.zip
