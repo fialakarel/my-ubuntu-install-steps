@@ -49,7 +49,7 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     xinit xinput xtightvncviewer xorg zathura unzip parcellite acpi keepass2 \
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel \
     mirage p7zip-full spice-vdagent gir1.2-spiceclientgtk-3.0 jq \
-    xclip mosh gparted xutils virt-viewer xsel
+    xclip mosh gparted xutils virt-viewer xsel xautolock autofs
 
 # Skipped packages
 #texlive-full texlive-bibtex-extra texlive-lang-czechslovak texlive-xetex texmaker
@@ -66,6 +66,8 @@ sudo pip3 install --upgrade wheel
 sudo pip3 install --upgrade ansible
 sudo pip3 install --upgrade youtube-dl
 sudo pip3 install --upgrade cookiecutter
+sudo pip3 install --upgrade autorandr
+sudo pip3 install --upgrade ulozto-downloader
 
 # Install VS Code
 wget "https://go.microsoft.com/fwlink/?LinkID=760868" -O /tmp/vscode.deb
