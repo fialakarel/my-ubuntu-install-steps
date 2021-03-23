@@ -153,7 +153,7 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     alsa-utils aspell-cs atool arandr bc bleachbit bridge-utils \
     caca-utils cifs-utils cups debian-goodies deborphan detox \
     docker.io exifprobe feh ffmpeg freerdp2-x11 gimp git gpicview gpicview highlight \
-    htop i3 i3status i7z ifenslave imagemagick iperf j4-dmenu-desktop key-mon kvmtool \
+    htop i3 i3status i7z ifenslave imagemagick iperf j4-dmenu-desktop kvmtool \
     libimage-exiftool-perl libnotify-bin libpango1.0-0 libreoffice-base libreoffice-calc \
     libreoffice-impress libreoffice-l10n-cs libreoffice-writer lptools lxc lxd \
     lxd-client lxd-tools mediainfo mesa-utils mplayer mpv nfs-common nmap ntp ntpdate \
@@ -161,10 +161,10 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     python3-pip qemu-kvm qemu-system qemu-utils ranger screen screengrab \
     simplescreenrecorder smartmontools sshfs ssvnc terminator tmux tree trickle \
     ttf-mscorefonts-installer udiskie unrar usb-creator-common usb-creator-gtk vim \
-    virt-goodies virt-manager vlan w3m wakeonlan wpasupplicant x2goclient xdotool \
+    virt-manager vlan w3m wakeonlan wpasupplicant x2goclient xdotool \
     xinit xinput xtightvncviewer xorg zathura unzip parcellite acpi keepass2 \
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel \
-    mirage p7zip-full spice-vdagent gir1.2-spiceclientgtk-3.0 jq \
+    p7zip-full spice-vdagent gir1.2-spiceclientgtk-3.0 jq \
     xclip mosh gparted xutils virt-viewer xsel xautolock autofs \
     audacity gparted ntfs-3g gddrescue
 
