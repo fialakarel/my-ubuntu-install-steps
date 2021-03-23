@@ -58,17 +58,17 @@ echo "HandlePowerKey=suspend" | sudo tee -a /etc/systemd/logind.conf
 echo "HandleLidSwitch=ignore" | sudo tee -a /etc/systemd/logind.conf
 echo "LidSwitchIgnoreInhibited=yes" | sudo tee -a /etc/systemd/logind.conf
 
-# Fix keyboard layout
-sudo sed -i 's/XKBLAYOUT="us"/XKBLAYOUT="cz"/' /etc/default/keyboard
-sudo dpkg-reconfigure keyboard-configuration
+## Fix keyboard layout
+#sudo sed -i 's/XKBLAYOUT="us"/XKBLAYOUT="cz"/' /etc/default/keyboard
+#sudo dpkg-reconfigure keyboard-configuration
 
-# Fix locales
-sudo locale-gen en_US.UTF-8
-sudo update-locale LANG="en_US.UTF-8"
-echo "LANG=en_US.UTF-8" | sudo tee /etc/default/locale
+## Fix locales
+#sudo locale-gen en_US.UTF-8
+#sudo update-locale LANG="en_US.UTF-8"
+#echo "LANG=en_US.UTF-8" | sudo tee /etc/default/locale
 
-# Fix DNS
-echo "Cache=no" | sudo tee -a /etc/systemd/resolved.conf
+## Fix DNS
+#echo "Cache=no" | sudo tee -a /etc/systemd/resolved.conf
 
 # Template for netplan
 cat | sudo tee /etc/netplan/01-netcfg.yaml <<EOF
