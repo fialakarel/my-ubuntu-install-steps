@@ -225,3 +225,13 @@ Section "Device"
   Driver "intel"
 EndSection
 EOF
+
+# Fix cursor size
+echo "Xcursor.size: 16" >~/.Xresources
+gsettings set org.gnome.desktop.interface cursor-size 32
+xrdb ~/.Xresources
+
+# sensors
+sudo apt install --yes lm-sensors
+sudo sensors-detect --auto
+
