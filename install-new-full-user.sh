@@ -120,14 +120,14 @@ EOF
 sudo systemctl enable lock.service
 
 # Get my configuration
-git clone https://github.com/fialakarel/dotfiles .dotfiles
-bash .dotfiles/delete-local-config.sh
-bash .dotfiles/create-symlinks.sh
+git clone https://github.com/fialakarel/dotfiles ~/.dotfiles
+bash ~/.dotfiles/delete-local-config.sh
+bash ~/.dotfiles/create-symlinks.sh
 
-mkdir temp
-mkdir Downloads
-mkdir -p git/github.com
-mkdir -p git/gitlab.com
+mkdir ~/temp
+mkdir ~/Downloads
+mkdir -p ~/git/github.com
+mkdir -p ~/git/gitlab.com
 
 # Fix Keepass2 segfault on Ubuntu
 sudo sed -i "s/cli/cli --verify-all/" $(which keepass2)
@@ -207,10 +207,21 @@ bash ./install/node.sh
 bash ./install/pyenv-poetry.sh
 bash ./install/update-firmware.sh
 
+# Fix dotfiles URL for personal laptop
 cd ~/.dotfiles
 git remote remove origin
 git remote add origin git@github.com:fialakarel/dotfiles.git
 
+# Autofs
 sudo mkdir /mnt/s1
 echo "/mnt/s1       192.168.1.100:/storage" | sudo tee /etc/auto.nfs
 echo "/-            /etc/auto.nfs   --timeout=30" | sudo tee -a /etc/auto.master
+
+# Fix Intel Backlight control for newer Ubuntu
+# Reference https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=833508#20
+cat | sudo tee -a /etc/X11/xorg.conf <<EOF
+Section "Device"
+  Identifier "Intel"
+  Driver "intel"
+EndSection
+EOF
