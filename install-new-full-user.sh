@@ -166,7 +166,7 @@ sudo apt-get -o Dpkg::Options::="--force-confold" install --yes \
     suckless-tools curl wget net-tools xbacklight xserver-xorg-video-intel \
     p7zip-full spice-vdagent gir1.2-spiceclientgtk-3.0 jq \
     xclip mosh gparted xutils virt-viewer xsel xautolock autofs \
-    audacity gparted ntfs-3g gddrescue
+    audacity gparted ntfs-3g gddrescue ssh-askpass ssh-askpass-gnome
 
 # Skipped packages
 #texlive-full texlive-bibtex-extra texlive-lang-czechslovak texlive-xetex texmaker
