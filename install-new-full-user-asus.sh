@@ -51,7 +51,7 @@ sudo apt-get install --yes alsa-utils atool arandr bc google-chrome-stable \
     net-tools xbacklight xserver-xorg-video-intel upower \
     xserver-xorg-input-all xserver-xorg-input-libinput xserver-xorg-input-synaptics \
     openvpn-systemd-resolved zip i3lock git-lfs dosfstools scrot exfat-utils exfat-fuse \
-    gnome-keyring pavucontrol pasystray insync git-crypt xclip
+    gnome-keyring pavucontrol pasystray insync git-crypt xclip tor pwgen
 
 # Handle power button
 echo "HandlePowerKey=suspend" | sudo tee -a /etc/systemd/logind.conf
@@ -241,3 +241,32 @@ echo "/-            /etc/auto.nfs   --timeout=30" | sudo tee -a /etc/auto.master
 # sensors
 sudo apt install --yes lm-sensors
 sudo sensors-detect --auto
+
+# ZSH plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Fix cursor size
+cat >~/.Xresources <<EOF
+Xcursor.size:  16
+EOF
+
+# Simplify file dialog locations
+cat >~/.config/user-dirs.dirs <<EOF
+# This file is written by xdg-user-dirs-update
+# If you want to change or add directories, just edit the line you're
+# interested in. All local changes will be retained on the next run.
+# Format is XDG_xxx_DIR="\$HOME/yyy", where yyy is a shell-escaped
+# homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
+# absolute path. No other format is supported.
+#
+#XDG_DESKTOP_DIR="\$HOME/Desktop"
+XDG_DOWNLOAD_DIR="\$HOME/Downloads"
+#XDG_TEMPLATES_DIR="\$HOME/Templates"
+#XDG_PUBLICSHARE_DIR="\$HOME/Public"
+#XDG_DOCUMENTS_DIR="\$HOME/Documents"
+#XDG_MUSIC_DIR="\$HOME/Music"
+#XDG_PICTURES_DIR="\$HOME/Pictures"
+#XDG_VIDEOS_DIR="\$HOME/Videos"
+EOF
+
