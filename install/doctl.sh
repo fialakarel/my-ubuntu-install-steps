@@ -2,7 +2,9 @@
 
 set -v
 
-version="$(curl https://github.com/digitalocean/doctl/releases/latest | cut -d'"' -f2 | egrep -o "[0-9]+\.[0-9]+\.[0-9]+$")"
+# stopped working -- github is blocking non-browser downloads
+#version="$(curl https://github.com/digitalocean/doctl/releases/latest | cut -d'"' -f2 | egrep -o "[0-9]+\.[0-9]+\.[0-9]+$")"
+version="1.84.1"
 
 cd /tmp
 
