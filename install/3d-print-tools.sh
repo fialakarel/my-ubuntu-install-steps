@@ -4,22 +4,16 @@ set -v
 
 # OpenScad + unzip
 sudo apt update
-sudo apt install --yes openscad unzip
+sudo apt install --yes openscad 
 
 # PrusaSlicer
-tempdir="$(mktemp -d)"
-cd $tempdir
 user="$(id --user --name)"
-dst="/home/${user}/bin/PrusaSlicer"
+dst="/home/${user}/bin/prusa-slicer"
+url="https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.6.0/PrusaSlicer-2.6.0+linux-x64-GTK3-202306191220.AppImage"
 
 # Get it
-wget https://cdn.prusa3d.com/downloads/drivers/prusa3d_linux_2_3_0.zip -O prusa3d.zip
+wget $url -O $dst
 
-# Unzip
-unzip prusa3d.zip
-
-# Install
-mv $(ls PrusaSlicer*.AppImage) $dst
 chmod +x $dst
 
 # Writing desktop file
@@ -37,6 +31,3 @@ MimeType=application/sla;model/x-wavefront-obj;model/x-geomview-off;application/
 Categories=Development;Engineering;
 EOF
 
-# Cleaning
-cd 
-rm -rf $tempdir
